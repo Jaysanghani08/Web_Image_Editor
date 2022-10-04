@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>My Image Editor</title>
+</head>
+
+<body>
+    <div class="main_container disable">
+        <h1>My Image Editor</h1>
+        <div class="wrap">
+            <div class="edit_options">
+                <div class="filters">
+                    <h3>filters</h3>
+                    <div class="options">
+                        <button id="brightness" class="active">Brighness</button>
+                        <button id="saturation">Saturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="greyscale">Greyscale</button>
+                    </div>
+
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brighteness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotates">
+                    <h3>Rotate & Flip</h3>
+                    <div class="options">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizontalflip"><i class="bx bx-reflect-vertical"></i></button>
+                        <button id="verticalflip"><i class="bx bx-reflect-horizontal"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview_img">
+                <img src="./image-placeholder.svg" alt="">
+            </div>
+        </div>
+        <div class="bottom">
+            <button class="reset">Reset all filters</button>
+            <div class="fileoptions">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="openImg">open image</button>
+                <button class="saveImg">save image</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
